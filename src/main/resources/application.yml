@@ -4,6 +4,27 @@ spring:
    kafka:
     binder:
      brokers: localhost:9092  # path to kafka brokers
+     autoCreateTopics: false
+     jaas:
+      loginModule: com.sun.security.auth.module.Krb5LoginModule
+      controlFlag: required
+      options: 
+       useKeyTab: true
+       storeKey: true
+       keyTab: /your/pathTokeytabFile
+       useTicketCache: false
+       principal: yourserviceaccount@domain
+       renewTicket: true
+       serviceName: kafka
+     configuration: 
+       security:
+         protocol: SASL_PLAINTEXT
+       sasl: 
+         kerberos: 
+           service:
+             name: kafka
+     producerProperties:
+       retries: 3
     bindings:
      CONSUMER_ONE:
       destination: TOPIC_1
