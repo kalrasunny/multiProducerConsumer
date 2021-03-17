@@ -38,5 +38,5 @@ Topic 2 --> Consumer 2 --> Producer Error --> Error Topic
 Topic 3 --> Consumer Error 
  
  
-The application showcases the appilility to host multiple producers and multiple consumers in one java application .
+The application showcases the ability to host multiple producers and multiple consumers in one java application .
 
