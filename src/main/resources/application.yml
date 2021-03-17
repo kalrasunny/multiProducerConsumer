@@ -1,0 +1,25 @@
+spring:
+ cloud:
+  stream:
+   kafka:
+    binder:
+     brokers: localhost:9092  # path to kafka brokers
+    bindings:
+     CONSUMER_ONE:
+      destination: TOPIC_1
+      contentType: application/json
+     CONSUMER_TWO:
+      destination: TOPIC_2
+      contentType: application/json
+     CONSUMER_ERROR:
+      destination: ERROR_TOPIC
+      contentType: application/json
+     PRODUCER_ONE:
+      destination: TOPIC_2
+      contentType: application/json
+     PRODUCER_TWO:
+      destination: TOPIC_3
+      contentType: application/json
+     PRODUCER_ERROR:
+      destination: ERROR_TOPIC
+      contentType: application/json
