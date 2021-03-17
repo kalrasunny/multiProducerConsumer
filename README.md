@@ -26,10 +26,12 @@ The @StreamListener annotation is modeled after other Spring Messaging annotatio
 This application has 3 Consumers and 3 Producers 
 
 Topic 1 --> Consumer 1 --> Producer One  --> Topic 2
+
 Topic 1 --> Consumer 1 --> Producer Error --> Error Topic
                        
                        
 Topic 2 --> Consumer 2 --> Producer Two  --> Topic 3
+
 Topic 2 --> Consumer 2 --> Producer Error --> Error Topic
                        
                        
