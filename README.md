@@ -22,3 +22,19 @@ The @Input annotation identifies an input channel, through which received messag
 The @StreamListener annotation is modeled after other Spring Messaging annotations (such as @MessageMapping, @JmsListener, @RabbitListener, etc.) 
 
 
+
+This application has 3 Consumers and 3 Producers 
+
+Topic 1 --> Consumer 1 --> Producer One --> Topic 2
+                       --> Producer Error --> Error Topic
+                       
+                       
+Topic 2 --> Consumer 2 --> Producer Two --> Topic 3
+                       --> Producer Error --> Error Topic
+                       
+                       
+ Topic 3 --> Consumer Error 
+ 
+ 
+ The application showcases the appilility to host multiple producers and multiple consumers in one java application .
+
